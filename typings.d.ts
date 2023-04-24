@@ -9,6 +9,8 @@ interface CurrentWeather {
 
 interface Daily {
     temperature_2m_max: [number];
+    temperature_2m_min: [number];
+    uv_index_max: [number];
     time: [string];
     weathercode: [number];
   }

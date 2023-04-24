@@ -27,6 +27,8 @@ const fetchWeatherQuery = gql`
       }
       daily {
         temperature_2m_max
+        temperature_2m_min
+        uv_index_max
         time
         weathercode
       }
