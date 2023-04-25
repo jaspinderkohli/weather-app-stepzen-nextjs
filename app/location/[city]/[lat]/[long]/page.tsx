@@ -5,6 +5,9 @@ import InformationPanel from "@/components/InformationPanel";
 import fetchWeatherQuery from "@/graphql/queries/fetchWeatherQueries";
 import TempChart from "@/components/TempChart";
 import RainChart from "@/components/RainChart";
+import HumidityChart from "@/components/HumidityChart";
+
+export const revalidate = 60;
 
 type Props = {
     params: {
@@ -118,6 +121,9 @@ async function WeatherPage({params: {city, lat, long}} : Props) {
                 results={results}
                 />
                 {/* Humidity Chart */}
+                <HumidityChart
+                results={results}
+                />
             </div>
         </div>
     </div>
