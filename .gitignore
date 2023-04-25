@@ -9,3 +9,4 @@ vscode
 **/.vscode/
 **/.next/
 .env.local
+.vercel
