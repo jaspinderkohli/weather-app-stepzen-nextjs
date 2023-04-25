@@ -50,6 +50,8 @@ const fetchWeatherQuery = gql`
         time
         uv_index
         uv_index_clear_sky
+        snowfall
+        rain
       }
       hourly_units {
         apparent_temperature

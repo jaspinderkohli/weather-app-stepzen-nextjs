@@ -30,6 +30,8 @@ type Hourly {
   time: [String]
   uv_index: [Float]
   uv_index_clear_sky: [Float]
+  snowfall: [Float]
+  rain: [Float]
 }
 type HourlyUnits {
   apparent_temperature: String

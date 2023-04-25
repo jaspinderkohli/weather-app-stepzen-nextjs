@@ -12,7 +12,6 @@ function HumidityChart({ results }: Props) {
             hour: "numeric",
             hour12: false,
         })).slice(0, 24)
-    console.log(hourly)
 
     const data = hourly.map((hour, index) => ({
         time: Number(hour),

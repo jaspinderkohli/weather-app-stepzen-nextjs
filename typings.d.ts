@@ -32,6 +32,8 @@ interface Hourly {
     time: [string];
     uv_index: [number];
     uv_index_clear_sky: [number];
+    snowfall: [number];
+    rain: [number];
   }
   interface HourlyUnits {
     apparent_temperature: string;

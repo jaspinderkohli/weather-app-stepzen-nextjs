@@ -6,6 +6,8 @@ import fetchWeatherQuery from "@/graphql/queries/fetchWeatherQueries";
 import TempChart from "@/components/TempChart";
 import RainChart from "@/components/RainChart";
 import HumidityChart from "@/components/HumidityChart";
+import getBasePath from "@/lib/getBasePath";
+import cleanData from "@/lib/cleanData";
 
 export const revalidate = 60;
 
@@ -26,11 +28,29 @@ async function WeatherPage({params: {city, lat, long}} : Props) {
             longitude: long,
             latitude: lat,
             timezone: 'GMT'
-            // timezone: Intl.DateTimeFormat().resolvedOptions().timeZone            
         }
     })
 
     const results: Root = data.myQuery;
+
+    const dataToSend =  cleanData(results, city);
+
+    const res = await fetch(`${getBasePath()}/api/getWeatherSummary`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+            },
+        body: JSON.stringify({
+            weatherData: dataToSend
+        })
+    })
+
+    if (!res.ok) {
+        throw new Error(res.statusText)
+    }
+    const GPTdata = await res.json();
+
+    const { content } = GPTdata;
 
     // console.log(results.hourly.time);
 
@@ -58,7 +78,8 @@ async function WeatherPage({params: {city, lat, long}} : Props) {
                 <div className="m-2 mb-10"> 
                     {/* Callout Card */}
                     <CalloutCard
-                        message={`It's currently ${results.current_weather.temperature}°C`}
+                        message={content || "AI ran into an error, please try again later. 😢"}
+                        // message="This is a test message"
                     />
                 </div>
 
