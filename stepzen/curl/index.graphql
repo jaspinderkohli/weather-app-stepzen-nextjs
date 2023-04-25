@@ -12,6 +12,8 @@ type Daily {
   uv_index_max: [Float]
   time: [Date]
   weathercode: [Int]
+  sunrise: [DateTime]
+  sunset: [DateTime]
 }
 type DailyUnits {
   temperature_2m_max: String

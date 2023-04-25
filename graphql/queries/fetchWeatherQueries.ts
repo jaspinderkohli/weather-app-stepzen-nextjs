@@ -31,6 +31,8 @@ const fetchWeatherQuery = gql`
         uv_index_max
         time
         weathercode
+        sunrise
+        sunset
       }
       daily_units {
         temperature_2m_max

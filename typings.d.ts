@@ -2,7 +2,7 @@ interface CurrentWeather {
     is_day: number;
     temperature: number;
     time: string;
-    weathecode: number;
+    weathercode: number;
     winddirection: string;
     windspeed: number;
 }
@@ -13,6 +13,8 @@ interface Daily {
     uv_index_max: [number];
     time: [string];
     weathercode: [number];
+    sunrise: [string];
+    sunset: [string];
   }
 
 interface DailyUnits {
