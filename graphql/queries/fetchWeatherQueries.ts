@@ -4,7 +4,7 @@ const fetchWeatherQuery = gql`
   query MyQuery (
     $current_weather: String
     $daily: String = "temperature_2m_max,weathercode,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,uv_index_clear_sky_max,uv_index_max"
-    $hourly: String = "temperature_2m,relativehumidity_2m,apparent_temperature,dewpoint_2m,precipitation_probability,uv_index,uv_index_clear_sky,snow_depth"
+    $hourly: String = "temperature_2m,relativehumidity_2m,apparent_temperature,dewpoint_2m,precipitation_probability,uv_index,uv_index_clear_sky,snow_depth,precipitation,rain,showers,snowfall,windgusts_10m,uv_index,uv_index_clear_sky"
     $latitude: String!
     $longitude: String!
     $timezone: String!

@@ -79,9 +79,7 @@ function InformationPanel({ city, results, lat, long }: Props) {
                     <SunIcon className="h-10 w-10 text-gray-400" />
                     <div className="flex-1 flex justify-between items-center">
                         <p className="text-extralight">Sunrise</p>
-                        <p className="text-2xl uppercase">{results.daily.sunrise[0]}</p>
                         <p className="text-2xl uppercase">
-                            {results.daily.sunrise}
                             {new Date(results.daily.sunrise[0]).toLocaleTimeString("en-GB", {
                                 hour: "numeric",
                                 minute: "numeric",

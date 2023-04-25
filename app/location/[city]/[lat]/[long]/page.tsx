@@ -3,6 +3,7 @@ import CalloutCard from "@/components/CalloutCard";
 import StatCard from "@/components/StatCard";
 import InformationPanel from "@/components/InformationPanel";
 import fetchWeatherQuery from "@/graphql/queries/fetchWeatherQueries";
+import TempChart from "@/components/TempChart";
 
 type Props = {
     params: {
@@ -21,12 +22,13 @@ async function WeatherPage({params: {city, lat, long}} : Props) {
             longitude: long,
             latitude: lat,
             timezone: 'GMT'
+            // timezone: Intl.DateTimeFormat().resolvedOptions().timeZone            
         }
     })
 
     const results: Root = data.myQuery;
 
-    // console.log(results);
+    // console.log(results.hourly.time);
 
   return (
     <div className="flex flex-col min-h-screen md:flex-row">
@@ -105,7 +107,12 @@ async function WeatherPage({params: {city, lat, long}} : Props) {
             <hr className="mb-5"/>
 
             <div className="space-y-3">
-                {/* Charts */}
+                {/* Temp Chart */}
+                <TempChart
+                results={results}
+                />
+                {/* Rain Chart */}
+                {/* Humidity Chart */}
             </div>
         </div>
     </div>

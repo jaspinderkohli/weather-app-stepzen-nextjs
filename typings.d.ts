@@ -29,7 +29,7 @@ interface Hourly {
     precipitation_probability: [number];
     relativehumidity_2m: [number];
     temperature_2m: [number];
-    time: [DateTime];
+    time: [string];
     uv_index: [number];
     uv_index_clear_sky: [number];
   }
