@@ -44,10 +44,7 @@ async function WeatherPage({params: {city, lat, long}} : Props) {
             weatherData: dataToSend
         })
     })
-
-    if (!res.ok) {
-        throw new Error(res.statusText)
-    }
+ 
     const GPTdata = await res.json();
 
     const { content } = GPTdata;
