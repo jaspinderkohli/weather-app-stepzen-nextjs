@@ -45,9 +45,9 @@ async function WeatherPage({params: {city, lat, long}} : Props) {
         })
     })
  
-    // const GPTdata = await res.json();
+    const GPTdata = await res.json();
 
-    // const { content } = GPTdata;
+    const { content } = GPTdata;
 
     // console.log(results.hourly.time);
 
@@ -75,8 +75,8 @@ async function WeatherPage({params: {city, lat, long}} : Props) {
                 <div className="m-2 mb-10"> 
                     {/* Callout Card */}
                     <CalloutCard
-                        // message={content || "AI ran into an error, please try again later. 😢"}
-                        message="This is a test message"
+                        message={content || "AI ran into an error, please try again later. 😢"}
+                        // message="This is a test message"
                     />
                 </div>
 
