@@ -10,7 +10,6 @@ This is a Next.js project powered by OpenAI, Next.js 13.3, Tailwind CSS, Tremor 
 - and more!
 
 ## Features
-- Server-side rendering (SSR) for fast performance and SEO optimization
 - OpenAI integration for natural language processing and machine learning capabilities
 - Tailwind CSS for easy and customizable styling
 - Tremor 2.0 for data streaming and processing
