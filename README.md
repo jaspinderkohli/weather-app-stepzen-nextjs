@@ -18,7 +18,7 @@ This is a Next.js project powered by OpenAI, Next.js 13.3, Tailwind CSS, Tremor 
 ## Getting Started
 Follow these steps to get the project up and running on your local machine:
 
-1. Clone the repository: `git clone https://github.com/yourusername/nextjs-openai-project.git`
+1. Clone the repository: `https://github.com/jaspinderkohli/weather-app-stepzen-nextjs`
 2. Install dependencies: `npm install`
 3. Create a `.env` file in the root directory with the necessary environment variables. For example:
 
